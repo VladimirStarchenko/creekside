@@ -14,7 +14,11 @@ function Home() {
         {/* Hours of operation */}
         <div className="work-hours">
           <h1 className="heading">Hours of Operation</h1>
-          <div className="hours-container"></div>
+          <div className="hours-container">
+            <p>Monday to Friday: 8:00 am - 6:00pm</p>
+            <p>Saturday: 9:00 am - 6:00 pm</p>
+            <p>Sunday: Closed</p>
+          </div>
         </div>
         {/* Contact Section */}
         <h1 className="heading">Contact Us</h1>

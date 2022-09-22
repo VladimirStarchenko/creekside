@@ -29,7 +29,7 @@ function Navbar({ setCurrentPage }) {
               </li>
               <li>
                 <a className="tabs" href="">
-                  Contact Us
+                  Liked
                 </a>
               </li>
             </ul>

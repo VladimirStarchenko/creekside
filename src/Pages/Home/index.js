@@ -1,4 +1,33 @@
+import React, { useRef, useEffect } from "react";
+
 function Home() {
+  const ref = useRef(null);
+
+  useEffect(() => {
+    let moreBtn = document.getElementById("more-btn");
+    let lessBtn = document.getElementById("less-btn");
+    let hiddenImgs = document.querySelectorAll("#hidden-img");
+
+    moreBtn.addEventListener("click", showPhotos);
+    lessBtn.addEventListener("click", hidePhotos);
+
+    function showPhotos() {
+      hiddenImgs.forEach((hiddenImg) => {
+        hiddenImg.classList.remove("hide");
+      });
+      moreBtn.classList.add("hide");
+      lessBtn.classList.remove("hide");
+    }
+
+    function hidePhotos() {
+      hiddenImgs.forEach((hiddenImg) => {
+        hiddenImg.classList.add("hide");
+      });
+      moreBtn.classList.remove("hide");
+      lessBtn.classList.add("hide");
+    }
+  }, []);
+
   return (
     <>
       <div className="blurred-content">
@@ -6,9 +35,55 @@ function Home() {
           <source src="/videos/Cascade.mp4" type="video/mp4" />
         </video>
 
+        <div className="heading">
+          <img
+            className="wheat-icon"
+            src="https://img.icons8.com/doodle/48/000000/wheat--v1.png"
+          />
+          <h2 className="slogan">Direct farm to table </h2>
+        </div>
         {/*  Photo Gallery */}
         <div className="photo-gallery">
           <h1 className="heading">Photo Gallery</h1>
+        </div>
+
+        <div className="photos-container">
+          <img className="photo" src="/img/dog.png" />
+          <img className="photo" src="/img/goat.png" />
+          <img className="photo" src="/img/chicken.png" />
+          <img className="photo" src="/img/dog.png" />
+          <img className="photo" src="/img/goat.png" />
+          <img className="photo" src="/img/chicken.png" />
+          <img className="photo" src="/img/dog.png" />
+          <img className="photo" src="/img/goat.png" />
+          <img className="photo" src="/img/chicken.png" />
+
+          <img
+            className="photo hide"
+            id="hidden-img"
+            src="/img/dog.png"
+            ref={ref}
+          />
+          <img
+            className="photo hide"
+            id="hidden-img"
+            src="/img/goat.png"
+            ref={ref}
+          />
+          <img
+            className="photo hide"
+            id="hidden-img"
+            src="/img/chicken.png"
+            ref={ref}
+          />
+        </div>
+        <div className="gallery-btns">
+          <button className="load-btn styled-btn" id="more-btn" ref={ref}>
+            Show More
+          </button>
+          <button className="load-btn styled-btn hide" id="less-btn" ref={ref}>
+            Show Less
+          </button>
         </div>
 
         {/* Hours of operation */}
@@ -86,7 +161,7 @@ function Home() {
                 <p className="help-block text-danger"></p>
               </div>
               <button
-                className="btn btn-custom"
+                className="btn btn-custom styled-btn"
                 type="submit"
                 role="button"
                 id="sendMessageButton"

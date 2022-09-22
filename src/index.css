@@ -22,6 +22,41 @@ header {
   z-index: 999;
 }
 
+.styled-btn {
+  background-color: #f9b836;
+  border: 2px solid #422800;
+  border-radius: 20px;
+  box-shadow: #422800 4px 4px 0 0;
+  color: #422800;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.styled-btn:hover {
+  background-color: #ffc248;
+}
+
+.styled-btn:active {
+  box-shadow: #422800 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+.wheat-icon {
+  justify-content: center;
+}
+
+.slogan {
+  font-family: "Nothing You Could Do", cursive;
+}
+
 .creekside-logo {
   display: block;
   margin-left: auto;
@@ -92,6 +127,34 @@ video {
   text-align: center;
 }
 
+.photos-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: auto;
+  width: 80%;
+  height: auto;
+}
+
+.photo {
+  padding: 20px;
+  height: 300px;
+  width: 400px;
+}
+
+.gallery-btns {
+  display: flex;
+  justify-content: center;
+}
+
+.load-btn {
+  width: 150px;
+}
+
+.hide {
+  display: none;
+}
+
 /* Hours */
 .work-hours {
   text-align: center;
@@ -132,32 +195,7 @@ video {
 }
 
 #sendMessageButton {
-  background-color: #f9b836;
-  border: 2px solid #422800;
-  border-radius: 20px;
-  box-shadow: #422800 4px 4px 0 0;
-  color: #422800;
-  cursor: pointer;
-  display: inline-block;
-  font-weight: 600;
-  font-size: 18px;
-  padding: 0 18px;
-  line-height: 50px;
-  text-align: center;
-  text-decoration: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
   width: 100%;
-}
-
-#sendMessageButton:hover {
-  background-color: #ffc248;
-}
-
-#sendMessageButton:active {
-  box-shadow: #422800 2px 2px 0 0;
-  transform: translate(2px, 2px);
 }
 
 .contact-information {
@@ -203,7 +241,61 @@ video {
 
 /* Mobile Display with Hamburger Menu */
 
-@media only screen and (max-device-width: 480px) {
+@media only screen and (max-device-width: 1280px) {
+  header {
+    height: 300px;
+  }
+
+  video {
+    width: 80%;
+    display: block;
+    margin: auto;
+  }
+
+  .contact-form {
+    width: 100%;
+    padding: 0;
+  }
+  .contact-map {
+    width: 100%;
+    padding-bottom: 3%;
+  }
+
+  .contact-information {
+    padding: 0;
+    text-align: center;
+    width: 100%;
+  }
+  .contact-information p {
+    font-size: 20px;
+  }
+  .photos-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .load-btn {
+    background-color: #f9b836;
+    border: 2px solid #422800;
+    border-radius: 20px;
+    box-shadow: #422800 4px 4px 0 0;
+    color: #422800;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 0 18px;
+    line-height: 50px;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 150px;
+  }
+}
+
+@media only screen and (max-device-width: 500px) {
   #menuToggle {
     display: block;
     position: relative;
@@ -332,5 +424,27 @@ video {
   }
   .contact-information p {
     font-size: 20px;
+  }
+  .photos-container {
+    display: grid;
+  }
+  .load-btn {
+    background-color: #f9b836;
+    border: 2px solid #422800;
+    border-radius: 20px;
+    box-shadow: #422800 4px 4px 0 0;
+    color: #422800;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 0 18px;
+    line-height: 50px;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 150px;
   }
 }

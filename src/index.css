@@ -54,7 +54,8 @@ header {
 }
 
 .slogan {
-  font-family: "Nothing You Could Do", cursive;
+  font-family: "Prata", serif;
+  font-size: 20px;
 }
 
 .creekside-logo {
@@ -125,6 +126,7 @@ video {
 /* Photo Gallery */
 .heading {
   text-align: center;
+  font-family: "Libre Baskerville", serif;
 }
 
 .photos-container {
@@ -149,6 +151,7 @@ video {
 
 .load-btn {
   width: 150px;
+  margin-bottom: 50px;
 }
 
 .hide {
@@ -160,16 +163,27 @@ video {
   text-align: center;
 }
 .hours-container {
-  font-size: 16px;
+  font-size: 20px;
 }
 /* Contact Page */
+.footer-heading {
+  text-align: center;
+  font-family: "Titan One", cursive;
+  font-size: 40px;
+  color: #ad7402;
+  text-shadow: 4px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+}
+
 .contact-section {
+  padding: 1% 2% 2% 2%;
+  width: 100%;
+  background-color: #cf8a00;
+}
+
+.contact {
   display: flex;
   flex-wrap: wrap;
   justify-content: start;
-  padding: 2%;
-  width: 100%;
-  background-color: #cf8a00;
 }
 
 .contact-form {
@@ -196,6 +210,7 @@ video {
 
 #sendMessageButton {
   width: 100%;
+  font-size: 20px;
 }
 
 .contact-information {
@@ -210,8 +225,28 @@ video {
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 
+/* About Section */
+.about-title {
+  font-size: 40px;
+  font-family: "Libre Baskerville", serif;
+}
+
+.about-content {
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 5%;
+  font-size: 30px;
+  font-family: "Amatic SC", cursive;
+}
+
+.about-img {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: auto;
+}
 /* Scroll to top button */
-.back-to-top {
+/* .back-to-top {
   position: fixed;
   display: none;
   background: #fdbe33;
@@ -237,7 +272,7 @@ video {
 
 .back-to-top:hover i {
   color: #fdbe33;
-}
+} */
 
 /* Mobile Display with Hamburger Menu */
 

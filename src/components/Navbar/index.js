@@ -13,23 +13,39 @@ function Navbar({ setCurrentPage }) {
             <span></span>
             <ul id="menu">
               <li>
-                <a className="tabs" href="">
+                <a
+                  onClick={() => setCurrentPage("Home")}
+                  href="#section0"
+                  className="tabs"
+                >
                   Home
                 </a>
               </li>
               <li>
-                <a className="tabs" href="">
+                <a
+                  className="tabs"
+                  href="#section2"
+                  onClick={() => setCurrentPage("About")}
+                >
                   About
                 </a>
               </li>
               <li>
-                <a className="tabs" href="">
-                  Stock
+                <a
+                  className="tabs"
+                  href="#section3"
+                  onClick={() => setCurrentPage("Liked")}
+                >
+                  Liked
                 </a>
               </li>
               <li>
-                <a className="tabs" href="">
-                  Liked
+                <a
+                  className="tabs"
+                  href="#section4"
+                  onClick={() => setCurrentPage("Stock")}
+                >
+                  Stock
                 </a>
               </li>
             </ul>
